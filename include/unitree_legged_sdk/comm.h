@@ -2,6 +2,20 @@
  Copyright (c) 2020, Unitree Robotics.Co.Ltd. All rights reserved.
 ******************************************************************/
 
+/**
+ * BmsCmd       ：电池指令
+ * BmsState     ：电池状态
+ * IMU          ：IMU参数
+ * LED          ：LED参数
+ * MotorState   : 电机状态--q, qd, qdd, tauEst
+ * MotorCmd     ：电机指令--mode, q, qd, qdd, tau, kp, kd
+ * LowState     ：底层状态
+ * LowCmd       ：底层指令
+ * HighState    ：高层状态
+ * HighCmd      ：高层指令
+ * UDPState     ：UDP状态
+*/
+
 #ifndef _UNITREE_LEGGED_COMM_H_
 #define _UNITREE_LEGGED_COMM_H_
 
@@ -23,6 +37,7 @@ namespace UNITREE_LEGGED_SDK
 
 #pragma pack(1)
 
+	/* 下面的Bms应该是Battery Management System 电源管理系统 */
 	typedef struct
 	{
 		uint8_t off;                       // off 0xA5
@@ -168,7 +183,8 @@ namespace UNITREE_LEGGED_SDK
 		std::array<uint32_t, 2> SN;
 		std::array<uint32_t, 2> version;
 		uint16_t bandWidth;
-		uint8_t mode;                       // 0. idle, default stand  1. force stand (controlled by dBodyHeight + ypr)
+		uint8_t mode;                       // 0. idle, default stand  
+											// 1. force stand (controlled by dBodyHeight + ypr)
 											// 2. target velocity walking (controlled by velocity + yawSpeed)
 											// 3. target position walking (controlled by position + ypr[0])
 											// 4. path mode walking (reserve for future release)

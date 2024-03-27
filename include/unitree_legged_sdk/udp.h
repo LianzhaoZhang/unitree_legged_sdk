@@ -30,8 +30,8 @@ namespace UNITREE_LEGGED_SDK
 
     constexpr int UDP_CLIENT_PORT = 8080;                       // local port
     constexpr int UDP_SERVER_PORT = 8007;                       // target port
-    constexpr char UDP_SERVER_IP_BASIC[] = "192.168.123.10";    // target IP address
-    constexpr char UDP_SERVER_IP_SPORT[] = "192.168.123.161";   // target IP address
+    constexpr char UDP_SERVER_IP_BASIC[] = "192.168.123.10";    // target IP address 底层控制
+    constexpr char UDP_SERVER_IP_SPORT[] = "192.168.123.161";   // target IP address 顶层控制
 
     typedef enum {
         nonBlock     = 0x00,

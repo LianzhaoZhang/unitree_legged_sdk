@@ -1,5 +1,7 @@
 /*****************************************************************
  Copyright (c) 2020, Unitree Robotics.Co.Ltd. All rights reserved.
+
+ 可以通过 LoopFunc 对象为不同的对象生成不同的线程
 ******************************************************************/
 
 #ifndef _UNITREE_LEGGED_LOOP_H_
