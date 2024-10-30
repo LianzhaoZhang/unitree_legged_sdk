@@ -11,7 +11,7 @@ def plot_data():
     
     try:
         # 读取足端力数据
-        force_data = pd.read_csv('/home/zlz/Downloads/UnitreeTest/unitree_legged_sdk/datasave/foot_force_standup_liedown.csv')
+        force_data = pd.read_csv('/home/zlz/Downloads/UnitreeTest/unitree_legged_sdk/datasave/foot_force_standup_fsm.csv')
         
         # 创建足端力子图
         ax1 = plt.subplot(1, 1, 1)

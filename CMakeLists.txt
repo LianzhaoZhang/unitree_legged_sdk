@@ -51,9 +51,12 @@ target_link_libraries(example_joystick ${EXTRA_LIBS})
 add_executable(standup example/standup.cpp)
 target_link_libraries(standup ${EXTRA_LIBS})
 
+add_executable(standupFSM example/standupFSM.cpp)
+target_link_libraries(standupFSM ${EXTRA_LIBS})
+
 # install
 install(TARGETS
-  example_position example_velocity example_torque example_walk example_joystick standup
+  example_position example_velocity example_torque example_walk example_joystick standupFSM
   DESTINATION bin/unitree)
 install(DIRECTORY lib/cpp/${ARCH}/
   DESTINATION lib/unitree
