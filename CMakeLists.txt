@@ -37,6 +37,11 @@ target_link_libraries(example_walk ${EXTRA_LIBS})
 add_executable(example_joystick example/example_joystick.cpp)
 target_link_libraries(example_joystick ${EXTRA_LIBS})
 
+add_executable(standup example/standup.cpp)
+target_link_libraries(standup ${EXTRA_LIBS})
+
+add_executable(standupFSM example/standupFSM.cpp)
+target_link_libraries(standupFSM ${EXTRA_LIBS})
 
 
 
